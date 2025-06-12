@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Crédito</title>
+    <link rel="icon" type="image/x-icon" href="./assets/Logo Sicoob.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="team-logo">
+        <a href="http://10.71.0.228:7000/bem-vindo" target="_blank">
+            <img src="./assets/sicoob-accredi-logo-preto.png" alt="Logo da Equipe">
+        </a>
+        <span style="padding-left: 10px;">  </span>
+        <a href="http://10.71.0.228:7000/bem-vindo" target="_blank">
+            <img src="./assets/logo-mind-colorido-horizontal.png" alt="Logo da Ac Credi">
+        </a>
+    </div>
+    <div class="container">
+        <div class="testeira">
+            <div>
+                <button class="back-button" onclick="window.location.href='checklist.html'">
+                    <span class="icon-back"><i class="fas fa-home"></i></span> 
+                </button>
+            </div>
+            <div class="testeira_direita">
+                <h1>Checklist Crédito</h1>
+            </div>
+        </div>
+        <div class="checklist-item">
+            <div class="title" onclick="toggleRules('1')">
+                <span>CHECKLIST DE OPERAÇÕES DE LIMITE DE CHEQUE ESPECIAL/CONTA GARANTIDA</span>
+                <p class="revision-date"></p>
+            </div>
+            <div id="1" class="rules">
+                <!-- Grupo 1 -->
+                <div class="parent-check">
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_1" onclick="toggleAllSubChecks('sub_check_1_1', this)"></td>
+                                <td>Análise de crédito</td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_1_1" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_1', 'check_1_1')"></td>
+                                <td>Verificar se proponente ou avalistas possuem dívida vencida ou restrição Serasa na presente data base. Caso possuam, justificar e enviar comprovante de quitação da dívida/restrição.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_1', 'check_1_1')"></td>
+                                <td>Verificar score de crédito.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            
+                <!-- Grupo 2 -->
+                <div class="parent-check">
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_2" onclick="toggleAllSubChecks('sub_check_1_2', this)"></td>
+                                <td>Análise de crédito</td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_1_2" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_2', 'check_1_2')"></td>
+                                <td>Verificar se proponente ou avalistas possuem dívida vencida ou restrição Serasa na presente data base. Caso possuam, justificar e enviar comprovante de quitação da dívida/restrição.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_2', 'check_1_2')"></td>
+                                <td>Verificar score de crédito.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="checklist-item">
+            <div class="title" onclick="toggleRules('2')">
+                <span>CHECKLIST DE OPERAÇÕES DE LIMITE DE CHEQUE ESPECIAL/CONTA GARANTIDA</span>
+                <p class="revision-date"></p>
+            </div>
+            <div id="2" class="rules">
+                <!-- Grupo 1 -->
+                <div class="parent-check">
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_1" onclick="toggleAllSubChecks('sub_check_2_1', this)"></td>
+                                <td>Análise de crédito</td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_2_1" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_1', 'check_2_1')"></td>
+                                <td>Verificar se proponente ou avalistas possuem dívida vencida ou restrição Serasa na presente data base. Caso possuam, justificar e enviar comprovante de quitação da dívida/restrição.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_1', 'check_2_1')"></td>
+                                <td>Verificar score de crédito.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            
+                <!-- Grupo 2 -->
+                <div class="parent-check">
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_2" onclick="toggleAllSubChecks('sub_check_2_2', this)"></td>
+                                <td>Análise de crédito</td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_2_2" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_2', 'check_2_2')"></td>
+                                <td>Verificar se proponente ou avalistas possuem dívida vencida ou restrição Serasa na presente data base. Caso possuam, justificar e enviar comprovante de quitação da dívida/restrição.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_2', 'check_2_2')"></td>
+                                <td>Verificar score de crédito.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="checklist-item">
+            <div class="title" onclick="toggleRules('3')">
+                <span>CHECKLIST DE OPERAÇÕES DE LIMITE DE CHEQUE ESPECIAL/CONTA GARANTIDA</span>
+                <p class="revision-date"></p>
+            </div>
+            <div id="3" class="rules">
+                <!-- Grupo 1 -->
+                <div class="parent-check">
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_3_1" onclick="toggleAllSubChecks('sub_check_3_1', this)"></td>
+                                <td>Análise de crédito</td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_3_1" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_3_1', 'check_3_1')"></td>
+                                <td>Verificar se proponente ou avalistas possuem dívida vencida ou restrição Serasa na presente data base. Caso possuam, justificar e enviar comprovante de quitação da dívida/restrição.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_3_1', 'check_3_1')"></td>
+                                <td>Verificar score de crédito.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            
+                <!-- Grupo 2 -->
+                <div class="parent-check">
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_3_2" onclick="toggleAllSubChecks('sub_check_3_2', this)"></td>
+                                <td>Análise de crédito</td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_3_2" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_3_2', 'check_3_2')"></td>
+                                <td>Verificar se proponente ou avalistas possuem dívida vencida ou restrição Serasa na presente data base. Caso possuam, justificar e enviar comprovante de quitação da dívida/restrição.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_3_2', 'check_3_2')"></td>
+                                <td>Verificar score de crédito.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="checklist-item">
+            <div class="title" onclick="toggleRules('4')">
+                <span>CHECKLIST DE OPERAÇÕES DE LIMITE DE CHEQUE ESPECIAL/CONTA GARANTIDA</span>
+                <p class="revision-date"></p>
+            </div>
+            <div id="4" class="rules">
+                <!-- Grupo 1 -->
+                <div class="parent-check">
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_4_1" onclick="toggleAllSubChecks('sub_check_4_1', this)"></td>
+                                <td>Análise de crédito</td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_4_1" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_4_1', 'check_4_1')"></td>
+                                <td>Verificar se proponente ou avalistas possuem dívida vencida ou restrição Serasa na presente data base. Caso possuam, justificar e enviar comprovante de quitação da dívida/restrição.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_4_1', 'check_4_1')"></td>
+                                <td>Verificar score de crédito.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            
+                <!-- Grupo 2 -->
+                <div class="parent-check">
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_4_2" onclick="toggleAllSubChecks('sub_check_4_2', this)"></td>
+                                <td>Análise de crédito</td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_4_2" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_4_2', 'check_4_2')"></td>
+                                <td>Verificar se proponente ou avalistas possuem dívida vencida ou restrição Serasa na presente data base. Caso possuam, justificar e enviar comprovante de quitação da dívida/restrição.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_4_2', 'check_4_2')"></td>
+                                <td>Verificar score de crédito.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

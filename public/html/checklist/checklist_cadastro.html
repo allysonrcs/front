@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Crédito</title>
+    <link rel="icon" type="image/x-icon" href="./assets/Logo Sicoob.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="team-logo">
+        <a href="http://10.71.0.228:7000/bem-vindo" target="_blank">
+            <img src="./assets/sicoob-accredi-logo-preto.png" alt="Logo da Equipe">
+        </a>
+        <span style="padding-left: 10px;">  </span>
+        <a href="http://10.71.0.228:7000/bem-vindo" target="_blank">
+            <img src="./assets/logo-mind-colorido-horizontal.png" alt="Logo da Ac Credi">
+        </a>
+    </div>
+    <div class="container">
+        <div class="testeira">
+            <div>
+                <button class="back-button" onclick="window.location.href='checklist.html'">
+                    <span class="icon-back"><i class="fas fa-home"></i></span> 
+                </button>
+            </div>
+            <div class="testeira_direita">
+                <h1>Checklist Cadastro</h1>
+            </div>
+        </div>
+               
+        <div class="checklist-item">
+            <div class="title" onclick="toggleRules('1')">
+                <span>Solicitação de encerramento de conta por iniciativa do associado.</span>
+                <p class="revision-date"></p>
+            </div>
+            <!-- REGRA 1 -->
+            <div id="1" class="rules">
+                <div class="parent-divider">
+                    <label>
+                        <table>
+                            <tr>
+                                <td>>> Agendar Encerramento:</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>  
+                <div class="parent-check"> <!-- Check 1 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_1" onclick="toggleAllSubChecks('sub_check_1_1', this)"></td>
+                                <td>Agendar encerramento no SISBR 2.0:
+                                    <p class="path_sisbr">SISBR 2.0 > Plataforma de atendimento > Incluir nome do associado > Conta Corrente > Cadastro.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_1_1" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_1', 'check_1_1')"></td>
+                                <td>Selecionar a conta desejada e preencher todos os campos de acordo com a solicitação por iniciativa do cooperado.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_1', 'check_1_1')"></td>
+                                <td>Selecionar motivo do encerramento de acordo com a solicitação do associado.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_1', 'check_1_1')"></td>
+                                <td>Preencher campo de observação de acordo com a solicitação de encerramento.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_1', 'check_1_1')"></td>
+                                <td>A data de encerramento precisa estar correta com o prazo necessário. (A data automática é D+30, mas é possivel alterar, caso seja necessário).</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="parent-check"> <!-- Check 2 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_2" onclick="toggleAllSubChecks('sub_check_1_2', this)"></td>
+                                <td>Cancelar cartão de crédito e zerar o saldo devedor.</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>    
+                <div class="parent-check"> <!-- Check 3 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_3" onclick="toggleAllSubChecks('sub_check_1_3', this)"></td>
+                                <td>Inutilizar talonário de cheques.</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>
+                <div class="parent-check"> <!-- Check 4 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_4" onclick="toggleAllSubChecks('sub_check_1_4', this)"></td>
+                                <td>Enviar email com comunidado em SISBR 2.0<br>
+                                <p class="path_sisbr">SISBR 2.0 > Plataforma de Atendimento > Incluir nome do Associado > Conta Corrente > Solicitação de Encerramento de Conta Corrente > Clicar na caixa de emails > Clicar no agendamento > Enviar Email.</p></td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>
+                <div class="parent-divider">
+                    <label>
+                        <table>
+                            <tr>
+                                <br>
+                                <td> >> Impedimentos que devem ser regularizados para o encerramento da conta.</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div> 
+                <div class="parent-check"> <!-- Check 5 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_5" onclick="toggleAllSubChecks('sub_check_1_5', this)"></td>
+                                <td>Caso exista: </td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_1_5" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Saldo negativo: Deve ser coberto.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Limite de cheque especial/conta garantida: Enviar solicitação de encerramento para o setor de Recuperação de Crédito.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Previsão de encargos ou IOF: É necessário aguardar a regularização.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Saldo bloqueado judicialmente: É necessário aguardar regularização.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Lançamento em aberto/futuro: É necessário aguardar regularização.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Aplicações financeiras: Devem ser resgatadas e sacadas.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Débitos automáticos: Devem ser cancelados.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Cartões: Devem ser cancelados/anuladose saldos devedores zerados.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Talonário de cheque: Deve ser inutilizado.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <div>
+                                    <td>Conta capital com integralizacao via conta corrente: Necessário desvincular a conta pelo SISBR 2.0<br>
+                                    <p class="path_sisbr">(SISBR 2.0 > Plataforma de atendimento > Incluir o Associado > Capital > Conta Capital Seleciona a conta > Outros Dados > Retirar o Número da Conta > Clicar em "OK".)</p></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <div>
+                                    <td>Parcelamento de integralização via conta corrente em aberto: <br>
+                                    <p class="path_sisbr">(SISBR 2.0 > Plataforma de atendimento > Incluir o Associado > Capital > Parcelamento > Seleciona a conta > Procurar > Clicar na parcela em abertocancelar.)</p></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_5', 'check_1_5')"></td>
+                                <td>Tarifas pendentes: Devem ser regularizadas.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="parent-divider">
+                    <label>
+                        <table>
+                            <tr>
+                                <br>
+                                <td> >> Documentos necessários, conclusão do encerramento e anexo no CAPES.</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div> 
+                <div class="parent-check"> <!-- Check 6 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_6" onclick="toggleAllSubChecks('sub_check_1_6', this)"></td>
+                                <td>Emitir documentos:</td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_1_6" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_6', 'check_1_6')"></td>
+                                <td>Solicitação de encerramento - Cliente.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_6', 'check_1_6')"></td>
+                                <td>Solicitação de demissão da cooperativa.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_1_6', 'check_1_6')"></td>
+                                <td>Carta de devolução de capital social.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="parent-check"> <!-- Check 7 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_7" onclick="toggleAllSubChecks('sub_check_1_7', this)"></td>
+                                <td>Concluído o encerramento da conta com o status alterado para: "Conta Encerrada".</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>
+                <div class="parent-check"> <!-- Check 8 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_1_8" onclick="toggleAllSubChecks('sub_check_1_8', this)"></td>
+                                <td>Anexar documentos devidamente preenchidos e assinados: (OBS: Não é necessário gravar, o documento apenas precisa aparecer na parte superior para estar concluído)
+                                    <p class="path_sisbr">SISBR 2.0 > Plataforma de atendimento > incluir associado > Capital > Conta Capital > Selecionar Conta Capital > Dcoumentos > Selecionar opção "Carta de Demissao" > Adicionar arquivo.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- REGRA 2 -->
+        <div class="checklist-item">
+            <div class="title" onclick="toggleRules('2')">
+                <span>Solicitação de encerramento de conta por iniciativa da cooperativa.</span>
+                <p class="revision-date"></p>
+            </div>
+            <div id="2" class="rules">
+                <div class="parent-divider">
+                    <label>
+                        <table>
+                            <tr>
+                                <td>>> Agendar Encerramento:</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>  
+                <div class="parent-check"> <!-- Check 1 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_1" onclick="toggleAllSubChecks('sub_check_2_1', this)"></td>
+                                <td>Agendar encerramento no SISBR 2.0
+                                    <p class="path_sisbr">SISBR 2.0 > Plataforma de atendimento > Incluir nome do associado > Conta Corrente > Cadastro.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_2_1" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_1', 'check_2_1')"></td>
+                                <td>Selecionar a conta desejada e preencher todos os campos de acordo com a solicitação por iniciativa do cooperado.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_1', 'check_2_1')"></td>
+                                <td>Selecionar motivo do encerramento de acordo com a solicitação do associado.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_1', 'check_2_1')"></td>
+                                <td>Preencher campo de observação de acordo com a solicitação de encerramento.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_1', 'check_2_1')"></td>
+                                <td>A data de encerramento precisa estar correta com o prazo necessário. (A data automática é D+30, mas é possivel alterar, caso seja necessário).</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="parent-check"> <!-- Check 2 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_2" onclick="toggleAllSubChecks('sub_check_2_2', this)"></td>
+                                <td>Cancelar cartão de crédito e zerar o saldo devedor.</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>    
+                <div class="parent-check"> <!-- Check 3 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_3" onclick="toggleAllSubChecks('sub_check_2_3', this)"></td>
+                                <td>Inutilizar talonário de cheques.</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>
+                <div class="parent-check"> <!-- Check 4 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_4" onclick="toggleAllSubChecks('sub_check_2_4', this)"></td>
+                                <td>Enviar email com comunidado em SISBR 2.0<br>
+                                <p class="path_sisbr">SISBR 2.0 > Plataforma de Atendimento > Incluir nome do Associado > Conta Corrente > Solicitação de Encerramento de Conta Corrente > Clicar na caixa de emails > Clicar no agendamento > Enviar Email.</p></td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>
+                <div class="parent-divider">
+                    <label>
+                        <table>
+                            <tr>
+                                <br>
+                                <td> >> Impedimentos que devem ser regularizados para o encerramento da conta.</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div> 
+                <div class="parent-check"> <!-- Check 5 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_5" onclick="toggleAllSubChecks('sub_check_2_5', this)"></td>
+                                <td>Caso exista: </td>
+                            </tr>
+                        </table>
+                    </label>
+                    <div id="sub_check_2_5" class="sub-rules">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Saldo negativo: Deve ser coberto.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Limite de cheque especial/conta garantida: Enviar solicitação de encerramento para o setor de Recuperação de Crédito.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Previsão de encargos ou IOF: É necessário aguardar a regularização.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Saldo bloqueado judicialmente: É necessário aguardar regularização.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Lançamento em aberto/futuro: É necessário aguardar regularização.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Aplicações financeiras: Devem ser resgatadas e sacadas.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Débitos automáticos: Devem ser cancelados.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Cartões: Devem ser cancelados/anuladose saldos devedores zerados.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Talonário de cheque: Deve ser inutilizado.</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <div>
+                                    <td>Conta capital com integralizacao via conta corrente: Necessário desvincular a conta pelo SISBR 2.0<br>
+                                    <p class="path_sisbr">(SISBR 2.0 > Plataforma de atendimento > Incluir o Associado > Capital > Conta Capital > Seleciona a conta > Outros Dados > Retirar o Número da Conta > Clicar em "OK".)</p></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <div>
+                                    <td>Parcelamento de integralização via conta corrente em aberto: <br>
+                                    <p class="path_sisbr">(SISBR 2.0 > Plataforma de atendimento > Incluir o Associado > Capital > Parcelamento > Seleciona a conta > Procurar > Clicar na parcela em aberto > Clicar em "Cancelar".)</p></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="sub-check" onchange="updateMainCheck('sub_check_2_5', 'check_2_5')"></td>
+                                <td>Tarifas pendentes: Devem ser regularizadas.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="parent-divider">
+                    <label>
+                        <table>
+                            <tr>
+                                <br>
+                                <td> >> Documentos necessários, conclusão do encerramento e anexo no CAPES.</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div> 
+                <div class="parent-check"> <!-- Check 6 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_6" onclick="toggleAllSubChecks('sub_check_2_6', this)"></td>
+                                <td>Emitir documento "Comunicado de encerramento - Cooperativa".</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>
+                <div class="parent-check"> <!-- Check 7 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_7" onclick="toggleAllSubChecks('sub_check_2_7', this)"></td>
+                                <td>Enviar documento pelo correio com Aviso De Recebimento (AR).</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>
+                <div class="parent-check"> <!-- Check 8 -->
+                    <label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="check_2_8" onclick="toggleAllSubChecks('sub_check_2_8', this)"></td>
+                                <td>Concluído o encerramento da conta com o status alterado para: "Conta Encerrada".</td>
+                            </tr>
+                        </table>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

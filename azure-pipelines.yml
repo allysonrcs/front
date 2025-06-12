@@ -1,0 +1,15 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  name: 'sing'  # mesmo nome que usou no config.sh
+
+jobs:
+- job: BuildAndDeploy
+  steps:
+    - checkout: none
+
+    - script: bash /home/ally/scripts/auto-build-front.sh
+      displayName: "Rodar build e deploy automático local"

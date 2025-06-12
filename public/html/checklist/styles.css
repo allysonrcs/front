@@ -1,0 +1,213 @@
+/* Reset de estilo para um começo limpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 3%;
+    height: 100vh;
+    margin: 20px;
+}
+
+/* Container centralizado */
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    font-size: 1.8rem;
+    color: #00AE9D;
+}
+
+.testeira {
+    display: flex;
+    justify-content: stretch; /* Espaça o título e o botão */
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.testeira_direita{
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    text-align: center; /* Espaça o título e o botão */
+}
+
+.back-button {
+    padding: 10px 10px; /* Reduzindo o padding para um botão menor */
+}
+
+.icon-back {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    text-align: center; /* Espaça o título e o botão */
+    font-size: 20px; /* Tamanho da seta */
+    width: auto;
+}
+
+/* Estilo para os itens de checklist */
+.checklist-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.checklist-item:hover {
+    background-color: #f4fdfc;
+}
+
+/* Título do item de checklist */
+.title {
+    color: #003641;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 0;
+    cursor: pointer;
+    /* border-bottom: 1px solid #ddd; */
+    transition: color 0.3s ease;
+}
+
+.title:hover {
+    color: #00AE9D;
+}
+
+/* Regras escondidas inicialmente */
+.rules {
+    border-top: 5px solid #ddd;
+    display: none;
+    padding: 5px;
+    background-color: #f1f1f1;
+    color: #003641;
+    border-radius: 8px;
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out, padding 0.8s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.rules.show {
+    margin-top: 5px;
+    display: block;
+    transform: scaleY(1);
+    opacity: 1;
+    max-height: 2000px;
+    padding: 10px;
+}
+
+.parent-check{
+    margin-bottom:5px;
+}
+
+.parent-divider{
+    font-weight: bold;
+}
+
+/* Estilo para os checkboxes */
+input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #00AE9D;
+}
+
+/* Estilo para a data de revisão */
+.path_sisbr {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Estilo para a data de revisão */
+.revision-date {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+.sub-rules {
+    margin-left: 20px;  /* Recuo para indicar que são subníveis */
+    display: block;
+}
+.sub-rules tr {
+    margin-top: 3px; /* Espaçamento entre os subníveis */
+    display: block;
+}
+
+/* Menu Principal*/
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    background-color: #003641;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito de hover */
+button:hover {
+    background-color: #00AE9D;
+    transform: translateY(-2px); /* Levanta o botão quando o mouse passa */
+}
+
+/* Efeito de foco (clicar) */
+button:focus {
+    outline: none; /* Remove a borda padrão */
+    box-shadow: 0 0 0 3px #00AE9D; /* Borda de foco azul */
+}
+
+/* Efeito de clique (pressionado) */
+button:active {
+    background-color: #004085;
+    transform: translateY(1px); /* Botão "afunda" um pouco ao ser clicado */
+}
+
+.team-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.team-logo img {
+    width: 75px; /* Ajuste conforme necessário */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-logo img:hover {
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    background: none;
+}

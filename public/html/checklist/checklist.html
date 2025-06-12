@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link rel="icon" type="image/x-icon" href="./assets/Logo Sicoob.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="team-logo">
+        <a href="http://10.71.0.228:7000/bem-vindo" target="_blank">
+            <img src="./assets/sicoob-accredi-logo-preto.png" alt="Logo da Equipe">
+        </a>
+        <span style="padding-left: 10px;">  </span>
+        <a href="http://10.71.0.228:7000/bem-vindo" target="_blank">
+            <img src="./assets/logo-mind-colorido-horizontal.png" alt="Logo da Ac Credi">
+        </a>
+    </div>
+    <div class="container">
+        <div style="text-align: center;">
+            <h1>Menu Principal</h1>
+        </div>
+        <div class="button-container">
+            <button id="botao_checklist_credito">Checklist Crédito</button>
+            <button id="botao_checklist_cadastro">Checklist Cadastro</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('botao_checklist_credito').addEventListener('click', function() { 
+            window.location.href = 'checklist_credito.html'; 
+        });
+
+        document.getElementById('botao_checklist_cadastro').addEventListener('click', function() {
+            window.location.href = 'checklist_cadastro.html'; 
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+FROM node:20-alpine
+
+ENV APP_HOME=/app/sing-front/
+WORKDIR ${APP_HOME}
+
+# Instala o tzdata e configura o timezone
+RUN apk add --no-cache tzdata && \
+    cp /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime && \
+    echo "America/Sao_Paulo" > /etc/timezone
+
+COPY . ./
+
+RUN npm install --legacy-peer-deps && \
+    chmod -R +x node_modules/.bin/
+
+RUN npm run build:prod-linux
+
+EXPOSE 7000
+
+CMD ["npm", "run", "preview"]
