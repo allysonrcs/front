@@ -163,14 +163,22 @@ export async function createPage(params: CreateProps): Promise<any> {
 }
 
 export function findAllAccessPage(): Promise<RoutesProps[]> {
-    return new Promise((resolve, reject) => {
-        api()
-            .get(`${baseUrl}`)
-            .then((res) => {
-                resolve(res.data);
-            })
-            .catch((res) => {
-                reject(res);
-            });
-    });
+    const routes: RoutesProps[] = [
+        {
+            route: "/acessos/usuarios",
+            label: "Usuários",
+            component: "ListRecordsUsers",
+            icon: "person",
+            isMenu: true,
+            routes: [
+                {
+                    route: "/acessos/usuarios/cadastrar",
+                    label: "Cadastro",
+                    component: "Users",
+                },
+            ],
+        },
+    ];
+
+    return Promise.resolve(routes);
 }

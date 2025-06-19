@@ -7,7 +7,6 @@ import AccountMenu from "./AccountMenu";
 import NotificationMenu from "./NotificationMenu";
 import ChooseStatus from "./ChooseStatus";
 import FullScreenMenu from "./FullScreenMenu";
-import CoopMaisMenu from "./CoopMaisMenu";
 
 import logo_sicoob_colorido from "@/assets/images/sicoob-accredi-logo-preto.png";
 import logo_sicoob_colorido2 from "@/assets/images/sicoob-accredi-logo-branco.png";
@@ -17,9 +16,6 @@ import bg_header_dark from "@/assets/images/bgMenuHorizontalDark2.png";
 import icon_sicoob from "@/assets/images/sicoob-icon.png";
 
 import { Link } from "react-router-dom";
-import InnovationMenu from "./InnovationMenu";
-import UtilitiesMenu from "./UtilitiesMenu";
-import CooperatedDataMenu from "./CooperatedDataMenu";
 
 export type OnForumProps = {
     id: number;
@@ -118,10 +114,7 @@ export function Nav() {
                             )}
 
                             <ChooseStatus />
-                            <CoopMaisMenu />
-                            <UtilitiesMenu />
-                            <InnovationMenu />
-                            <CooperatedDataMenu />
+                            {/* Removed menus to simplify navigation */}
                             <NotificationMenu />
                             <FullScreenMenu />
                             <AccountMenu />
